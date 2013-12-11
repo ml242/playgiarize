@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Playgiarize</title>
+  <%= favicon_link_tag 'favicon.ico' %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= stylesheet_link_tag "http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css", :media => 'all' %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="row header-container">
+      <div class="col-md-6">
+        <a href="/" class="logo"><h1 style="margin-bottom: 0;"><i class="fa fa-copy"></i> PLAYGIARIZE</h1></a>
+        <h3 style="margin-top: 7px; letter-spacing: 0.1em;">a gift to slackers everywhere.</h3>
+      </div>
+      <div class="col-md-6">
+        <nav align="right" class="login-links">
+          <% if session[:user_id] %>
+          <% @user = User.find(session[:user_id]) %>
+          <h3>logged in as <%= link_to("#{@user.username}", "/users/#{@user.id}") %> | <%= link_to('Log out', '/logout') %></h3>
+          <% else %>
+          <h3><%= link_to('Log in', '/login') %> | <%= link_to('Sign up', '/users/new') %></h3>
+          <% end %>
+          <h3><%= link_to('paper-pile', '/pieces') %>
+          </nav>
+        </div>
+      </div>
+      <div class="row">
+        <%= yield %>
+      </div>
+      <div class="row">
+        <div class="col-md-12" align="right">
+          <%= link_to('about', '/about', style: 'color: #A9A9A9;') %>
+        </div>
+      </div>
+    </div>
+  </body>
+  </html>

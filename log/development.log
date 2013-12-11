@@ -1,0 +1,825 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (9.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (3.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (2.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsersTable (20131022153627)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (9.5ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying(255), "password_digest" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20131022153627')
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePiecesTable (20131022153634)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (7.9ms)[0m  [1mCREATE TABLE "pieces" ("id" serial primary key, "orig_title" character varying(255), "orig_author" character varying(255), "orig_body" text, "title" character varying(255), "body" text, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20131022153634')
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (4.6ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-11 14:45:41 -0500
+Processing by PiecesController#new as HTML
+  Rendered pieces/new.html.erb within layouts/application (10.9ms)
+Compiled bootstrap.css  (0ms)  (pid 2304)
+Compiled custom.css  (0ms)  (pid 2304)
+Compiled application.css  (160ms)  (pid 2304)
+Compiled jquery.js  (80ms)  (pid 2304)
+Compiled jquery_ujs.js  (0ms)  (pid 2304)
+Compiled application.js  (266ms)  (pid 2304)
+Completed 200 OK in 754ms (Views: 610.0ms | ActiveRecord: 72.2ms)
+
+
+Started POST "/pieces" for 127.0.0.1 at 2013-12-11 14:46:47 -0500
+Processing by PiecesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xxkxd2irMRU1//nC0iode7t9lNVc11b6j9C7F/ze+Yc=", "piece"=>{"orig_title"=>"Kiev riot police retreat after storming protest bastions", "orig_body"=>"With each attempt to solve the problem posed by the Ukrainian \"Euromaidan\" demonstrators, President Viktor Yanukovych seems to dig himself into an even bigger political hole.\r\n\r\nInterior ministry officials said the reason why scores of riot police swept into the Independence Square protest camp was to \"clear the street\" for traffic. To many observers it seemed that the overwhelming show of force was instead an attempt to drive out the protesters once and for all.\r\n\r\nWhatever the reason, the mass civil disobedience movement, which was sparked when Mr Yanukovych unexpectedly decided to put on hold an historic trade agreement with the EU, has received yet another major boost.\r\n\r\nProtesters on Wednesday were inspired and defiant as they stood in Independence Square and recounted how they had turned back the police with an impregnable human wall, and, at the mayor's office, with water hoses and barricades.\r\n\r\nThe elite Berkut riot police have since retreated, as if to lick their wounds. And protest organisers are promising an even bigger rally this weekend than even last Sunday's historic gathering. But so far, neither gigantic demonstrations, nor attempts to force the protesters out have broken the political deadlock."}, "commit"=>"Playgiarize"}
+ETHON: Libcurl initialized
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.626895
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.11672700000000003
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117174
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117433
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.116555
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.107008
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.116907
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117485
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.116398
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.11748700000000001
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.118399
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.116005
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117346
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.105225
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.10857
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117293
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.116647
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117617
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.11635300000000004
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.116303
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117919
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117541
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.116902
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.116954
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.116164
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117574
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.11719199999999996
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117102
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117947
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.121465
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117148
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.128699
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.116097
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.11558
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.11646199999999995
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.116241
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.11989
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.100916
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.098455
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.099742
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.103174
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.098303
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.10583
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.100686
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117429
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.100149
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.106418
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.101096
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.099751
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.109357
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.104019
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.099873
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.10397
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.11956100000000003
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117539
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.137028
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.135423
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117415
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117073
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.137343
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117529
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.12648099999999995
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.116623
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.13695
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117375
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.116869
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.116839
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.137226
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.120508
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.11386799999999997
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.126582
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.12514
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117432
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117145
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.143136
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.106259
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.11697000000000002
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117494
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.116389
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117227
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117258
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117174
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117253
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.115915
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.11576299999999995
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.136743
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117045
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.137136
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.11736
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.126805
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.116924
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117951
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.12683299999999997
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.11582
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117195
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.178043
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.104206
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.116594
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.12409
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.169629
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.11771200000000004
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.12999
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.12582
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.125762
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.12454
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.127832
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.12719
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.10437
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.10344200000000003
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.165785
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.099425
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.108783
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.103717
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.107812
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.10758
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.099744
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.12793
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117469
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.116399
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117246
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.116707
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.127096
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.113567
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.119863
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.127645
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.145891
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.126674
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.116865
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.126999
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.127004
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.116863
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.136783
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.14585700000000001
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.121304
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.122331
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.115751
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.115688
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.109972
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.112329
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.135869
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.11742200000000003
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.110046
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.113692
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.125958
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.159271
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.114563
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.148069
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.145355
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.116552
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.121391
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.124401
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.115683
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117874
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.605363
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.165784
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.107931
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.125347
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.116152
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.14756
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.11731899999999995
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.115828
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117357
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.116892
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.126866
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117053
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.116985
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.125886
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.11671399999999998
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.135928
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.128778
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.126714
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.12083
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.143373
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.120993
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.186963
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.327785
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.236515
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.147617
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.156656
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.12733099999999997
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.238694
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.135979
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.11711
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.11706
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.118055
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.115885
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.16587399999999997
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117037
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.12556
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.118809
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117284
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.117606
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.125745
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.116079
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.12678999999999996
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.116858
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.126652
+ETHON: performed MULTI
+ETHON: started MULTI
+ETHON:         performed EASY url= response_code=200 return_code=ok total_time=0.127494
+ETHON: performed MULTI
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (20.3ms)[0m  INSERT INTO "pieces" ("body", "created_at", "orig_author", "orig_body", "orig_title", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["body", "With each effort to works the proposition firm by the Rutene \"Euromaidan\" demonstrators, President Viktor Yanukovych seems to dishumate himself into an even bigger politic hole.\r\n\r\nInterior council officials said the ground why scores of merrymaking 6-up swept into the Independence Square kick roundabout was to \"clear the street\" for traffic. To many observers it seemed that the irresistible show of validity was equivalent an shy to float out the protesters once and for all.\r\n\r\nWhatever the reason, the body polite disregard movement, which was sparked when Mr Yanukovych unexpectedly clear to put on hold an historical calling coherence with the EU, has received yet another adult boost.\r\n\r\nProtesters on Humpday were inhaled and bold as they stood in Independence Square and recounted how they had retrousse back the popo with an unconquerable humanistic wall, and, at the mayor's office, with water down hoses and barricades.\r\n\r\nThe elite Berkut dissipate 6-up have since retreated, as if to defeat their wounds. And declare organisers are flattering an even bigger meet this weekend than even last Sunday's historical gathering. But so far, neither brobdignagian demonstrations, nor attempts to validity the protesters out have subdued the politic deadlock."], ["created_at", Wed, 11 Dec 2013 19:47:13 UTC +00:00], ["orig_author", nil], ["orig_body", "With each attempt to solve the problem posed by the Ukrainian \"Euromaidan\" demonstrators, President Viktor Yanukovych seems to dig himself into an even bigger political hole.\r\n\r\nInterior ministry officials said the reason why scores of riot police swept into the Independence Square protest camp was to \"clear the street\" for traffic. To many observers it seemed that the overwhelming show of force was instead an attempt to drive out the protesters once and for all.\r\n\r\nWhatever the reason, the mass civil disobedience movement, which was sparked when Mr Yanukovych unexpectedly decided to put on hold an historic trade agreement with the EU, has received yet another major boost.\r\n\r\nProtesters on Wednesday were inspired and defiant as they stood in Independence Square and recounted how they had turned back the police with an impregnable human wall, and, at the mayor's office, with water hoses and barricades.\r\n\r\nThe elite Berkut riot police have since retreated, as if to lick their wounds. And protest organisers are promising an even bigger rally this weekend than even last Sunday's historic gathering. But so far, neither gigantic demonstrations, nor attempts to force the protesters out have broken the political deadlock."], ["orig_title", "Kiev riot police retreat after storming protest bastions"], ["title", "kiev dissipate 6-up asylum after storming objection bastions"], ["updated_at", Wed, 11 Dec 2013 19:47:13 UTC +00:00], ["user_id", nil]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/pieces/1
+Completed 302 Found in 26144ms (ActiveRecord: 22.2ms)
+
+
+Started GET "/pieces/1" for 127.0.0.1 at 2013-12-11 14:47:13 -0500
+Processing by PiecesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPiece Load (3.7ms)[0m  SELECT "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered pieces/show.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 105ms (Views: 97.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/pieces" for 127.0.0.1 at 2013-12-11 14:47:38 -0500
+Processing by PiecesController#index as HTML
+  [1m[36mPiece Load (0.9ms)[0m  [1mSELECT "pieces".* FROM "pieces" [0m
+  Rendered pieces/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pieces" for 127.0.0.1 at 2013-12-11 14:47:41 -0500
+Processing by PiecesController#index as HTML
+  [1m[35mPiece Load (0.6ms)[0m  SELECT "pieces".* FROM "pieces" 
+  Rendered pieces/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-12-11 14:47:44 -0500
+Processing by SessionController#new as HTML
+  Rendered session/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-12-11 14:47:46 -0500
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xxkxd2irMRU1//nC0iode7t9lNVc11b6j9C7F/ze+Yc=", "username"=>"matt@matt.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = 'matt@matt.com' LIMIT 1[0m
+Completed 500  in 60ms
+
+RuntimeError - :
+  app/controllers/session_controller.rb:20:in `create'
+  actionpack (3.2.14) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:414:in `_run__64951625416491301__process_action__344152751986424860__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.14) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.14) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.14) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  meta_request (0.2.8) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  rack-contrib (1.1.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.2.8) lib/meta_request/middlewares/headers.rb:16:in `call'
+  meta_request (0.2.8) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:35:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.14) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `_run__260131331859537883__call__4287605405193391563__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (1.0.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.0.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.0.1) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.14) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/ML/.rbenv/versions/1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/ML/.rbenv/versions/1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/ML/.rbenv/versions/1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/70340630100040/variables" for 127.0.0.1 at 2013-12-11 14:47:46 -0500
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-12-11 14:47:57 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 19ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-12-11 14:48:04 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xxkxd2irMRU1//nC0iode7t9lNVc11b6j9C7F/ze+Yc=", "user"=>{"username"=>"matt", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO "users" ("created_at", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Wed, 11 Dec 2013 19:48:04 UTC +00:00], ["password_digest", "$2a$10$weJSPrtFD1uicV0zteTY9.f4lXqxIHOgHhsyg51c.S3FkFnJdGsuu"], ["updated_at", Wed, 11 Dec 2013 19:48:04 UTC +00:00], ["username", "matt"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36mPiece Load (0.7ms)[0m  [1mSELECT "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mUPDATE "pieces" SET "user_id" = 1, "updated_at" = '2013-12-11 19:48:04.199468' WHERE "pieces"."id" = 1[0m
+  [1m[35m (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 120ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2013-12-11 14:48:04 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (1.5ms)[0m  SELECT COUNT(*) FROM "pieces" WHERE "pieces"."user_id" = 1
+  [1m[36mPiece Load (3.3ms)[0m  [1mSELECT "pieces".* FROM "pieces" WHERE "pieces"."user_id" = 1[0m
+  Rendered users/show.html.erb within layouts/application (37.2ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 82ms (Views: 41.3ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/pieces/1" for 127.0.0.1 at 2013-12-11 14:48:06 -0500
+Processing by PiecesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPiece Load (0.7ms)[0m  [1mSELECT "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered pieces/show.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/pieces/1/edit" for 127.0.0.1 at 2013-12-11 14:48:40 -0500
+Processing by PiecesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPiece Load (0.8ms)[0m  [1mSELECT "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered pieces/edit.html.erb within layouts/application (3.0ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 15ms (Views: 11.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/pieces" for 127.0.0.1 at 2013-12-11 14:48:48 -0500
+Processing by PiecesController#index as HTML
+  [1m[36mPiece Load (0.6ms)[0m  [1mSELECT "pieces".* FROM "pieces" [0m
+  Rendered pieces/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2013-12-11 14:49:01 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "pieces" WHERE "pieces"."user_id" = 1
+  [1m[36mPiece Load (0.7ms)[0m  [1mSELECT "pieces".* FROM "pieces" WHERE "pieces"."user_id" = 1[0m
+  Rendered users/show.html.erb within layouts/application (4.2ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 14ms (Views: 10.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-11 14:49:03 -0500
+Processing by PiecesController#new as HTML
+  Rendered pieces/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.5ms)

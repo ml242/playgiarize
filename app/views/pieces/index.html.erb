@@ -1,0 +1,9 @@
+<div class="col-md-12">
+  <ul>
+    <% @pieces.each do |piece| %>
+    <% if piece.user_id %>
+    <li><%= link_to("#{piece.title}", "/pieces/#{piece.id}") %></li>
+    <% end %>
+    <% end %>
+  </ul>
+</div>
